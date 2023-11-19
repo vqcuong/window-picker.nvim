@@ -14,8 +14,8 @@ function M:set_config(config)
   self.chars = config.chars
   self.show_prompt = config.show_prompt
 
-  self.selection_display = config.statusline_winbar_picker.selection_display
-  self.use_winbar = config.statusline_winbar_picker.use_winbar
+  self.selection_display = config.statusline_winbar.selection_display
+  self.use_winbar = config.statusline_winbar.use_winbar
   self.highlights = config.highlights
 
   self.opt_cap = {

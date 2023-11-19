@@ -19,7 +19,7 @@ return {
   },
 
   -- This section contains picker specific configurations
-  statusline_winbar_picker = {
+  statusline_winbar = {
     -- You can change the display string in status bar.
     -- It supports '%' printf style. Such as `return char .. ': %f'` to display
     -- buffer file path. See :h 'stl' for details.
@@ -41,15 +41,10 @@ return {
   -- prompt message to show to get the user input
   prompt_message = "Pick window: ",
 
-  -- when there is only one window available to pick from, use that window
-  -- without prompting the user to select
+  -- auto select the only window without prompting the user to select
   autoselect_one = true,
 
   filter = {
-    -- whether you want to include the window you are currently on to window
-    -- selection or not
-    include_current_win = false,
-
     -- if you want to manually filter out the windows, pass in a function that
     -- takes two parameters. You should return window ids that should be
     -- included in the selection
@@ -75,6 +70,9 @@ return {
       -- filter using window options
       window_opts = {},
     },
+
+    -- whether you want to include the window you are currently on to window selection or not
+    include_current_win = false,
   },
 
   -- You can pass in the highlight name or a table of content to set as highlight

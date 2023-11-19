@@ -20,7 +20,7 @@ end
 
 function M:set_config(config)
   self.chars = config.chars
-  self.selection_display = config.statusline_winbar_picker.selection_display
+  self.selection_display = config.statusline_winbar.selection_display
   vim.api.nvim_set_hl(0, "WindowPickerStatusLine", config.highlights.statusline.focused)
   vim.api.nvim_set_hl(0, "WindowPickerStatusLineNC", config.highlights.statusline.unfocused)
 end
