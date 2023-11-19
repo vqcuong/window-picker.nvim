@@ -27,7 +27,7 @@ function M:build()
   if type(self.config.hint) ~= "string" or not vim.tbl_contains(supported_hints, self.config.hint) then
     vim.notify("Hint is configured incorrectly, fallback to the default: statusline-winbar", vim.log.levels.WARN)
   end
-  local dhint = require("window-picker.hints.%s"):format(self.config.hint)
+  local dhint = require(string.format("window-picker.hints.%s", self.config.hint))
 
   local hint = configurer:config_hint(dhint:new())
   local filter = configurer:config_filter(dfilter:new())
