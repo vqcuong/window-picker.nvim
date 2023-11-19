@@ -33,6 +33,7 @@ end
 
 function M:filter_windows(windows)
   if self.filter_func ~= nil then
+    vim.notify("use filter_func")
     return self.filter_func(windows)
   end
   local filtered_windows = windows
