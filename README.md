@@ -17,22 +17,22 @@ picked window.
 
 ```lua
 {
-    'vqcuong/window-picker.nvim',
-    name = 'window-picker',
-    event = 'VeryLazy',
-    version = false,
-    opts = {}
+  "vqcuong/window-picker.nvim",
+  name = "window-picker",
+  event = "VeryLazy",
+  version = false,
+  opts = {}
 }
 ```
 
 ### packer
 ```lua
 use {
-    's1n7ax/nvim-window-picker',
-    tag = 'v2.*',
-    config = function()
-        require'window-picker'.setup()
-    end,
+  "vqcuong/window-picker.nvim",
+  branch = "master",
+  config = function()
+    require("window-picker").setup()
+  end,
 }
 ```
 
